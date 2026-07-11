@@ -1,0 +1,172 @@
+/* =========================================================
+   Women Safety AI — Theme
+   Palette: deep indigo/slate (stability) + teal (safety)
+   Amber/red reserved ONLY for active risk indicators
+   ========================================================= */
+
+:root{
+  --ink:#1E2340;
+  --ink-2:#2A3050;
+  --ink-soft:#565C7C;
+  --bg:#F5F6FA;
+  --card:#FFFFFF;
+  --line:#E2E4EF;
+  --safe:#0F9B8E;
+  --safe-soft:#E4F5F2;
+  --caution:#B8802B;
+  --caution-soft:#FBF0DE;
+  --risk:#B8433D;
+  --risk-soft:#FBE7E5;
+}
+
+/* Main Layout */
+.main > div{
+    padding-top:1rem;
+}
+
+.stApp{
+    background:var(--bg);
+}
+
+/* Headings */
+h1, h2, h3{
+    color:var(--ink) !important;
+    font-weight:700 !important;
+}
+
+/* ---------------------------------------------------------
+   Hero / illustration banner used at the top of each page
+   --------------------------------------------------------- */
+.hero-banner{
+    display:flex;
+    align-items:center;
+    gap:28px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:24px;
+    padding:28px 32px;
+    margin-bottom:24px;
+    box-shadow:0 4px 16px rgba(30,35,64,.05);
+    animation: heroRise .6s cubic-bezier(.22,1,.36,1) both;
+}
+
+.hero-banner .hero-art{
+    width:150px;
+    min-width:150px;
+    animation: heroFloat 4.5s ease-in-out infinite;
+}
+
+.hero-banner .hero-art svg{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+.hero-banner .hero-text .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:11px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:4px;
+}
+
+.hero-banner .hero-text h1,
+.hero-banner .hero-text h2{
+    margin:0 0 6px 0 !important;
+}
+
+.hero-banner .hero-text p{
+    color:var(--ink-soft);
+    margin:0;
+    font-size:15px;
+}
+
+@keyframes heroRise{
+    from{ opacity:0; transform:translateY(14px); }
+    to{ opacity:1; transform:translateY(0); }
+}
+
+@keyframes heroFloat{
+    0%,100%{ transform:translateY(0); }
+    50%{ transform:translateY(-6px); }
+}
+
+@media (max-width: 700px){
+    .hero-banner{ flex-direction:column; text-align:center; padding:24px; }
+}
+
+/* Metric Cards */
+div[data-testid="metric-container"]{
+    border-radius:18px;
+    border:1px solid var(--line);
+    background:var(--card);
+    padding:18px;
+    box-shadow:0 4px 12px rgba(30,35,64,.06);
+    transition:all .3s ease;
+}
+
+div[data-testid="metric-container"]:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 22px rgba(30,35,64,.10);
+    border-color:var(--safe);
+}
+
+/* Buttons */
+.stButton>button{
+    width:100%;
+    border-radius:12px;
+    font-size:16px;
+    font-weight:600;
+    border:1px solid var(--line);
+    transition: all .2s ease;
+}
+
+.stButton>button:hover{
+    border-color:var(--safe);
+    color:var(--safe);
+    transform:translateY(-2px);
+    box-shadow:0 8px 18px rgba(15,155,142,.15);
+}
+
+.stButton>button:active{
+    transform:translateY(0);
+}
+
+/* primary-styled buttons (Streamlit type="primary") */
+.stButton>button[kind="primary"]{
+    background:var(--ink);
+    color:#fff;
+    border:none;
+}
+.stButton>button[kind="primary"]:hover{
+    background:var(--ink-2);
+    color:#fff;
+    box-shadow:0 8px 18px rgba(30,35,64,.25);
+}
+
+/* Sidebar */
+section[data-testid="stSidebar"]{
+    border-right:1px solid var(--line);
+    background:var(--card);
+}
+
+/* Alerts / status boxes recolored to the calm palette */
+div[data-testid="stAlertContentSuccess"]{ color:var(--safe); }
+div[data-testid="stAlertContentInfo"]{ color:var(--ink); }
+div[data-testid="stAlertContentWarning"]{ color:var(--caution); }
+div[data-testid="stAlertContentError"]{ color:var(--risk); }
+
+/* Divider */
+hr{
+    border-color:var(--line) !important;
+}
+
+/* Hide Streamlit branding */
+#MainMenu{
+    visibility:hidden;
+}
+
+footer{
+    visibility:hidden;
+}

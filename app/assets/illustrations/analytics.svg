@@ -1,0 +1,28 @@
+<svg viewBox="0 0 320 240" xmlns="http://www.w3.org/2000/svg">
+  <ellipse cx="160" cy="215" rx="100" ry="12" fill="#1E2340" opacity="0.06"/>
+
+  <!-- ground / axis -->
+  <line x1="50" y1="190" x2="270" y2="190" stroke="#E2E4EF" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- bars -->
+  <rect x="70" y="130" width="34" height="60" rx="8" fill="#E4F5F2"/>
+  <rect x="120" y="95" width="34" height="95" rx="8" fill="#0F9B8E"/>
+  <rect x="170" y="115" width="34" height="75" rx="8" fill="#FBF0DE"/>
+  <rect x="220" y="70" width="34" height="120" rx="8" fill="#B8802B"/>
+
+  <!-- face on the tallest bar -->
+  <circle cx="230" cy="90" r="4" fill="#1E2340"/>
+  <circle cx="244" cy="90" r="4" fill="#1E2340"/>
+  <path d="M228 100 Q237 108 246 100" stroke="#1E2340" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+
+  <!-- trend line -->
+  <polyline points="87,128 137,92 187,112 237,66" fill="none" stroke="#1E2340" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+  <circle cx="237" cy="66" r="6" fill="#1E2340" opacity="0.55"/>
+
+  <!-- little magnifier for insight -->
+  <circle cx="65" cy="55" r="18" fill="#FFFFFF" stroke="#0F9B8E" stroke-width="5"/>
+  <line x1="78" y1="68" x2="92" y2="82" stroke="#1E2340" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- sparkle -->
+  <path d="M280 40 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3 z" fill="#B8802B" opacity="0.7"/>
+</svg>

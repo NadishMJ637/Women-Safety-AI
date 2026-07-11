@@ -1,0 +1,50 @@
+<svg viewBox="0 0 360 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#14B8A6"/>
+      <stop offset="100%" stop-color="#0F9B8E"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ground shadow -->
+  <ellipse cx="180" cy="270" rx="95" ry="14" fill="#1E2340" opacity="0.07"/>
+
+  <!-- sparkles -->
+  <g fill="#B8802B" opacity="0.8">
+    <path d="M60 70 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 z"/>
+    <path d="M300 110 l3 7 7 3 -7 3 -3 7 -3 -7 -7 -3 7 -3 z"/>
+  </g>
+  <g fill="#0F9B8E" opacity="0.6">
+    <circle cx="55" cy="150" r="4"/>
+    <circle cx="310" cy="190" r="5"/>
+  </g>
+
+  <!-- shield body -->
+  <path d="M180 40 L255 68 C255 150 225 210 180 236 C135 210 105 150 105 68 Z"
+        fill="url(#shieldGrad)" stroke="#1E2340" stroke-width="4" stroke-linejoin="round"/>
+
+  <!-- inner shield highlight -->
+  <path d="M180 58 L238 80 C238 148 214 196 180 218 C146 196 122 148 122 80 Z"
+        fill="#ffffff" opacity="0.10"/>
+
+  <!-- face: eyes -->
+  <circle cx="160" cy="118" r="7" fill="#1E2340"/>
+  <circle cx="200" cy="118" r="7" fill="#1E2340"/>
+  <circle cx="162.5" cy="115.5" r="2" fill="#ffffff"/>
+  <circle cx="202.5" cy="115.5" r="2" fill="#ffffff"/>
+
+  <!-- smile -->
+  <path d="M158 138 Q180 156 202 138" stroke="#1E2340" stroke-width="5" fill="none" stroke-linecap="round"/>
+
+  <!-- rosy cheeks -->
+  <circle cx="145" cy="132" r="6" fill="#B8433D" opacity="0.25"/>
+  <circle cx="215" cy="132" r="6" fill="#B8433D" opacity="0.25"/>
+
+  <!-- heart badge on chest -->
+  <path d="M180 168 c-8-9-22-4-22 7 0 12 22 24 22 24s22-12 22-24c0-11-14-16-22-7z"
+        fill="#F5F6FA" opacity="0.95"/>
+
+  <!-- little arm waving -->
+  <path d="M108 150 C88 140 78 118 86 100" stroke="#1E2340" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <circle cx="86" cy="100" r="9" fill="url(#shieldGrad)" stroke="#1E2340" stroke-width="4"/>
+</svg>

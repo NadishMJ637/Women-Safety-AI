@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual Environments
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Streamlit Cache
+.streamlit/
+
+# SQLite Database
+history.db
+
+# Generated Reports
+reports/
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
